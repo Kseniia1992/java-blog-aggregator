@@ -6,6 +6,5 @@ import org.springframework.stereotype.Component;
 /**
  * @author ksolodovnik
  */
-@Component
-public class UserDaoImpl extends GenericDaoImpl<Uzer> implements UserDao {
-}
+@Component("uzerDao")
+public class UzerDaoImpl extends GenericDaoImpl<Uzer> implements UzerDao {}

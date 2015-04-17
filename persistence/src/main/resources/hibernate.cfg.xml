@@ -14,7 +14,7 @@
       <property name="hbm2ddl.auto">create</property>
 
       <!-- Enable Hibernate's automatic session context management -->
-      <property name="hibernate.current_session_context_class">thread</property>
+  <!--    <property name="hibernate.current_session_context_class">thread</property>-->
 
       <mapping class="cz.jiripinkas.jba.entity.Uzer"></mapping>
       <mapping class="cz.jiripinkas.jba.entity.Role"></mapping>
