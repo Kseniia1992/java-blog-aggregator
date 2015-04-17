@@ -8,11 +8,11 @@ import java.util.List;
  */
 
 @Entity
-public class User {
+public class Uzer {
 
     @Id
     @GeneratedValue
-    private Integer id;
+    private long id;
 
     private String name;
 
@@ -20,18 +20,18 @@ public class User {
 
     private String password;
 
-    @ManyToMany
+    @ManyToMany(cascade = {CascadeType.ALL})
     @JoinTable
     private List<Role> roles;
 
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "uzer", cascade = {CascadeType.ALL})
     private List<Blog> blogs;
 
-    public Integer getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(long id) {
         this.id = id;
     }
 

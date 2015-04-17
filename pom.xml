@@ -4,14 +4,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>cz.jiripinkas.jba</groupId>
+    <groupId>${myapp.groupid}</groupId>
     <artifactId>java-blog-aggregator</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
     <modules>
-        <module>web</module>
         <module>persistence</module>
+        <module>web</module>
     </modules>
 
     <build>
@@ -35,8 +35,10 @@
 
     <!-- Shared version number properties -->
     <properties>
+        <myapp.groupid>cz.jiripinkas.jba</myapp.groupid>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <org.springframework.version>4.1.6.RELEASE</org.springframework.version>
+        <hibernate.version>4.3.8.Final</hibernate.version>
     </properties>
 
     <dependencies>
@@ -112,7 +114,7 @@
             <scope>test</scope>
         </dependency>
 
-        <dependency>
+    <!--    <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-entitymanager</artifactId>
             <version>4.3.8.Final</version>
@@ -122,6 +124,12 @@
             <artifactId>hsqldb</artifactId>
             <version>2.3.2</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-jpa</artifactId>
+            <version>1.8.0.RELEASE</version>
+        </dependency> -->
 <!--
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -137,6 +145,24 @@
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
             <version>1.2.17</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.persistence</groupId>
+            <artifactId>persistence-api</artifactId>
+            <version>1.0.2</version>
         </dependency>
     </dependencies>
 

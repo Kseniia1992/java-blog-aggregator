@@ -1,11 +1,11 @@
 package cz.jiripinkas.jba.controller;
 
 
-import cz.jiripinkas.jba.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import cz.jiripinkas.jba.service.UserService;
 
 /**
  * @author ksolodovnik

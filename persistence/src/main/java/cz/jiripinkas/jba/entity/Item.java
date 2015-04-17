@@ -12,7 +12,7 @@ public class Item {
 
     @Id
     @GeneratedValue
-    private Integer id;
+    private long id;
 
     private String title;
 
@@ -27,11 +27,11 @@ public class Item {
     @JoinColumn(name = "blog_id")
     private Blog blog;
 
-    public Integer getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(long id) {
         this.id = id;
     }
 

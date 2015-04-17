@@ -12,7 +12,7 @@ public class Blog {
 
     @Id
     @GeneratedValue
-    private Integer id;
+    private long id;
 
     private String url;
 
@@ -20,17 +20,25 @@ public class Blog {
 
     @ManyToOne
     @JoinColumn(name = "user_id")
-    private User user;
+    private Uzer uzer;
 
-    @OneToMany(mappedBy = "blog")
+    @OneToMany(mappedBy = "blog", cascade = {CascadeType.ALL})
     private List<Item> items;
 
-    public Integer getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(long id) {
         this.id = id;
+    }
+
+    public Uzer getUzer() {
+        return uzer;
+    }
+
+    public void setUzer(Uzer uzer) {
+        this.uzer = uzer;
     }
 
     public String getUrl() {
@@ -47,14 +55,6 @@ public class Blog {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
     }
 
     public List<Item> getItems() {
