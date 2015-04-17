@@ -11,7 +11,6 @@ import java.util.List;
  * @author ksolodovnik
  */
 public abstract class GenericDaoImpl<T> implements GenericDao<T> {
-
     @Autowired
     protected SessionFactory sessionFactory;
 
@@ -24,7 +23,7 @@ public abstract class GenericDaoImpl<T> implements GenericDao<T> {
     }
 
     @Override
-    public void create(final T t){
+    public void create(T t){
         this.sessionFactory.getCurrentSession().save(t);
     }
 
@@ -32,5 +31,10 @@ public abstract class GenericDaoImpl<T> implements GenericDao<T> {
     public List<T> getAll(){
         List<T> list = sessionFactory.getCurrentSession().createCriteria(type).list();
         return list;
+    }
+
+    @Override
+    public T getById(long id){
+        return (T) this.sessionFactory.getCurrentSession().get(type,id);
     }
 }

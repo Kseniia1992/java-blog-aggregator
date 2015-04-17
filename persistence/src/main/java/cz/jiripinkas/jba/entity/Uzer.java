@@ -1,6 +1,7 @@
 package cz.jiripinkas.jba.entity;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -8,7 +9,7 @@ import java.util.List;
  */
 
 @Entity
-public class Uzer {
+public class Uzer implements Serializable {
 
     @Id
     @GeneratedValue

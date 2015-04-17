@@ -27,4 +27,11 @@ public class UzerServiceImpl implements UzerService{
         uzerDao.create(Init.initUzer2());
         return uzerDao.getAll();
     }
+
+    @Override
+    public Uzer getUzerById(long id) {
+        return uzerDao.getById(id);
+    }
+
+
 }

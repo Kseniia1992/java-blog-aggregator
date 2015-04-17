@@ -6,6 +6,7 @@ import cz.jiripinkas.jba.service.UzerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.ArrayList;
@@ -28,5 +29,11 @@ public class UserController {
         uzers = uzerService.getAllUzers();
         System.out.println(uzers.get(0).getName());
         return "users";
+    }
+
+    @RequestMapping(name = "/users/{id}")
+    public String detail(Model model, @PathVariable long id){
+        model.addAttribute("user", uzerService.getUzerById(id));
+        return "user-detail";
     }
 }
