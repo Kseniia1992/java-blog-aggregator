@@ -1,7 +1,8 @@
 package cz.jiripinkas.jba.dao;
 
+import cz.jiripinkas.jba.entity.Item;
+
 /**
- * Created by ksolodovnik on 17.04.15.
+ * @author ksolodovnik
  */
-public interface ItemDao {
-}
+public interface ItemDao extends GenericDao<Item>{}

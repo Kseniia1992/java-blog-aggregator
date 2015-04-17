@@ -1,7 +1,10 @@
 package cz.jiripinkas.jba.dao;
 
+import cz.jiripinkas.jba.entity.Blog;
+import org.springframework.stereotype.Component;
+
 /**
- * Created by ksolodovnik on 17.04.15.
+ * @author ksolodovnik
  */
-public class BlogDaoImpl {
-}
+@Component("blogDao")
+public class BlogDaoImpl extends GenericDaoImpl<Blog> implements BlogDao {}

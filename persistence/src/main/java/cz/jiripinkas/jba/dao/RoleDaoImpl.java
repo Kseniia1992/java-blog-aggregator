@@ -7,6 +7,4 @@ import org.springframework.stereotype.Component;
  * @author ksolodovnik
  */
 @Component("roleDao")
-public class RoleDaoImpl extends GenericDaoImpl<Role> implements RoleDao {
-
-}
+public class RoleDaoImpl extends GenericDaoImpl<Role> implements RoleDao {}

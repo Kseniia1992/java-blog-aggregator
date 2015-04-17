@@ -17,21 +17,27 @@ public class UzerServiceImpl implements UzerService{
     private UzerDao uzerDao;
 
     @Override
+    /**
+     * Creates user in the db
+     */
     public void createUzer(Uzer uzer) {
         uzerDao.create(uzer);
     }
 
     @Override
+    /**
+     * Gets all users
+     */
     public List<Uzer> getAllUzers() {
-        uzerDao.create(Init.initUzer1());
-        uzerDao.create(Init.initUzer2());
         return uzerDao.getAll();
     }
 
     @Override
+    /**
+     * Gets user by id
+     */
     public Uzer getUzerById(long id) {
         return uzerDao.getById(id);
     }
-
 
 }

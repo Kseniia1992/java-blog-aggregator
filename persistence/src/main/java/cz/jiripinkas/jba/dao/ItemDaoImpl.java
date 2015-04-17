@@ -1,7 +1,10 @@
 package cz.jiripinkas.jba.dao;
 
+import cz.jiripinkas.jba.entity.Item;
+import org.springframework.stereotype.Component;
+
 /**
- * Created by ksolodovnik on 17.04.15.
+ * @author ksolodovnik
  */
-public class ItemDaoImpl {
-}
+@Component("itemDao")
+public class ItemDaoImpl extends GenericDaoImpl<Item> implements ItemDao{}

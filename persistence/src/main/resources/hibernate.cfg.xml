@@ -9,18 +9,12 @@
       <property name="dialect">org.hibernate.dialect.PostgreSQL82Dialect</property>
       <property name="connection.username">admin</property>
       <property name="connection.password">admin</property>
-
       <property name="show_sql">true</property>
       <property name="hbm2ddl.auto">create</property>
-
-      <!-- Enable Hibernate's automatic session context management -->
-  <!--    <property name="hibernate.current_session_context_class">thread</property>-->
 
       <mapping class="cz.jiripinkas.jba.entity.Uzer"></mapping>
       <mapping class="cz.jiripinkas.jba.entity.Role"></mapping>
       <mapping class="cz.jiripinkas.jba.entity.Blog"></mapping>
       <mapping class="cz.jiripinkas.jba.entity.Item"></mapping>
-    <!-- DB schema will be updated if needed -->
-    <!-- <property name="hbm2ddl.auto">update</property> -->
   </session-factory>
 </hibernate-configuration>

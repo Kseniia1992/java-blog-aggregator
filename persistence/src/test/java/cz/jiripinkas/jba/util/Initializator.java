@@ -10,6 +10,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
+ * This class inializes the db
  * @author ksolodovnik
  */
 public class Initializator {
@@ -56,5 +57,4 @@ public class Initializator {
         item.setPublishedDate(new Date());
         return item;
     }
-
 }

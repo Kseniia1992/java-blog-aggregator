@@ -1,5 +1,8 @@
 package cz.jiripinkas.jba.entity;
 
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
@@ -12,7 +15,7 @@ import java.util.List;
 public class Blog implements Serializable {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     private String url;
@@ -24,6 +27,7 @@ public class Blog implements Serializable {
     private Uzer uzer;
 
     @OneToMany(mappedBy = "blog", cascade = {CascadeType.ALL})
+    @LazyCollection(LazyCollectionOption.FALSE)
     private List<Item> items;
 
     public long getId() {

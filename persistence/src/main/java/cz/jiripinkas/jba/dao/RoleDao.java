@@ -5,5 +5,4 @@ import cz.jiripinkas.jba.entity.Role;
 /**
  * @author ksolodovnik
  */
-public interface RoleDao extends GenericDao<Role>{
-}
+public interface RoleDao extends GenericDao<Role>{}

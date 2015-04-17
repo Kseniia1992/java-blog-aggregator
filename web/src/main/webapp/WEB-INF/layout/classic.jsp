@@ -17,8 +17,6 @@
     <tilesx:useAttribute name="current"/>
 
     <div class="container">
-
-        <!-- Static navbar -->
         <nav class="navbar navbar-default">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -39,7 +37,6 @@
                 </div><!--/.nav-collapse -->
             </div><!--/.container-fluid -->
         </nav>
-
         <tiles:insertAttribute name="body"/>
         <br>
         <br>

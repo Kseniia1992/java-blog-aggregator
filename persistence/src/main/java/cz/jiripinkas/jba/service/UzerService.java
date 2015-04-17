@@ -14,4 +14,5 @@ public interface UzerService {
     public void createUzer(Uzer uzer);
     public List<Uzer> getAllUzers();
     public Uzer getUzerById(long id);
+
 }

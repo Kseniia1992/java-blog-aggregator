@@ -3,8 +3,9 @@ import org.springframework.test.context.junit4.AbstractTransactionalJUnit4Spring
 /**
  * @author ksolodovnik
  */
+
 //@RunWith(SpringJUnit4ClassRunner.class)
-//@ContextConfiguration(locations = {"file:/main/webapp/WEB-INF/applicationContext.xml"})
+//@ContextConfiguration(locations = {"file:src/main/webapp/WEB-INF/applicationContext.xml"})
 public class TestDaoLayer extends AbstractTransactionalJUnit4SpringContextTests {
 
  /*   @Autowired

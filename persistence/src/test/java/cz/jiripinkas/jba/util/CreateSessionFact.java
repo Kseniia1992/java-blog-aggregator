@@ -7,9 +7,11 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 
 /**
- * @author ksolodovnik
+ * Hibernate session.
+ * Used for testing.
  */
 public class CreateSessionFact {
+
     private static SessionFactory sessionFactory;
     private static ServiceRegistry serviceRegistry;
 

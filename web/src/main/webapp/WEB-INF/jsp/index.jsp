@@ -1,3 +1,3 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-    hello from Spring Web MVC
+    Hello from Spring Web MVC

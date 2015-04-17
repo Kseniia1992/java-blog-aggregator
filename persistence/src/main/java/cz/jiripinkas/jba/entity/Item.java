@@ -12,7 +12,7 @@ import java.util.Date;
 public class Item implements Serializable {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     private String title;

@@ -1,5 +1,8 @@
 package cz.jiripinkas.jba.entity;
 
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
@@ -12,7 +15,7 @@ import java.util.List;
 public class Uzer implements Serializable {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     private String name;
@@ -23,9 +26,11 @@ public class Uzer implements Serializable {
 
     @ManyToMany(cascade = {CascadeType.ALL})
     @JoinTable
+    @LazyCollection(LazyCollectionOption.FALSE)
     private List<Role> roles;
 
-    @OneToMany(mappedBy = "uzer", cascade = {CascadeType.ALL})
+    @OneToMany(mappedBy = "uzer",cascade = {CascadeType.ALL})
+    @LazyCollection(LazyCollectionOption.FALSE)
     private List<Blog> blogs;
 
     public long getId() {
