@@ -44,4 +44,7 @@
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
 
+    <!--Import security.xml which has Spring Security context configuration -->
+    <import resource="security.xml"></import>
+
 </beans>
