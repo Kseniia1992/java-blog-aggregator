@@ -6,10 +6,10 @@
              xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
 		                         http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
 
-    <http>
+    <http auto-config="true">
         <intercept-url pattern="/users**" access="hasRole('ROLE_ADMIN')" />
         <intercept-url pattern="/users/**" access="hasRole('ROLE_ADMIN')"  />
-        <form-login login-page="/login.html"></form-login>
+        <form-login login-page="/login.html" />
         <logout />
     </http>
 
