@@ -36,8 +36,6 @@ public class UzerServiceImpl implements UzerService{
     /**
      * Gets user by id
      */
-    public Uzer getUzerById(long id) {
-        return uzerDao.getById(id);
-    }
+    public Uzer getUzerById(long id) { return uzerDao.getById(id); }
 
 }
