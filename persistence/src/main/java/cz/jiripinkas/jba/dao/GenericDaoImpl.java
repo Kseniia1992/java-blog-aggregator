@@ -15,7 +15,7 @@ import java.util.List;
 public abstract class GenericDaoImpl<T> implements GenericDao<T> {
 
     @Autowired
-    protected SessionFactory sessionFactory;
+    private SessionFactory sessionFactory;
 
     private Class<T> type;
 
@@ -51,8 +51,5 @@ public abstract class GenericDaoImpl<T> implements GenericDao<T> {
     */
     public T getById(long id){
         return (T) this.sessionFactory.getCurrentSession().get(type,id);
-  //   T t = (T) sessionFactory.getCurrentSession().createCriteria(type)
-//                .add(Restrictions.eq("id",id)).setFetchMode("", FetchMode.JOIN);
-
     }
 }

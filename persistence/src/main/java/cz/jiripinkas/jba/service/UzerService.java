@@ -11,8 +11,8 @@ import java.util.List;
 @Transactional
 public interface UzerService {
 
-    public void createUzer(Uzer uzer);
-    public List<Uzer> getAllUzers();
-    public Uzer getUzerById(long id);
+    void createUzer(Uzer uzer);
+    List<Uzer> getAllUzers();
+    Uzer getUzerById(long id);
 
 }

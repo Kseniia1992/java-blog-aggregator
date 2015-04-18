@@ -7,8 +7,8 @@ import java.util.List;
  */
 public interface GenericDao<T> {
 
-   public void create(T t);
-   public List<T> getAll();
-   public T getById(long id);
+    void create(T t);
+    List<T> getAll();
+    T getById(long id);
 
 }
