@@ -1,6 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 
 <style>
     .form-signin {
@@ -39,10 +41,12 @@
     }
 </style>
 
-<form class="form-signin" role="form" action="<c:url value='/j_spring_security_check' />" method="POST">
+<form class="form-signin" role="form" <c:url value='/j_spring_security_check'/> method="POST">
     <h2 class="form-signin-heading">Please sign in</h2>
     <input type="text" name="j_username" class="form-control" placeholder="Name" required autofocus>
     <input type="text" name="j_password" class="form-control" placeholder="Password" required>
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="location.href='/users.html'">Sign in</button>
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+</form>
+
 </form>
