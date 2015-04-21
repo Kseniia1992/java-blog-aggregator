@@ -24,12 +24,12 @@ public class Uzer implements Serializable {
 
     private String password;
 
-    @ManyToMany(cascade = {CascadeType.ALL})
+    @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable
     @LazyCollection(LazyCollectionOption.FALSE)
     private List<Role> roles;
 
-    @OneToMany(mappedBy = "uzer",cascade = {CascadeType.ALL})
+    @OneToMany(mappedBy = "uzer",cascade = CascadeType.ALL)
     @LazyCollection(LazyCollectionOption.FALSE)
     private List<Blog> blogs;
 

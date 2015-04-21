@@ -22,11 +22,11 @@ public class Blog implements Serializable {
 
     private String name;
 
-    @ManyToOne
+    @ManyToOne()
     @JoinColumn(name = "user_id")
     private Uzer uzer;
 
-    @OneToMany(mappedBy = "blog", cascade = {CascadeType.ALL})
+    @OneToMany(mappedBy = "blog",cascade = CascadeType.ALL)
     @LazyCollection(LazyCollectionOption.FALSE)
     private List<Item> items;
 

@@ -50,6 +50,6 @@ public abstract class GenericDaoImpl<T> implements GenericDao<T> {
     * Gets by id
     */
     public T getById(long id){
-        return (T) this.sessionFactory.getCurrentSession().get(type,id);
+        return (T) this.sessionFactory.getCurrentSession().load(type,id);
     }
 }

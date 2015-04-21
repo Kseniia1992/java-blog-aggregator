@@ -24,7 +24,7 @@ public class Item implements Serializable {
 
     private String link;
 
-    @ManyToOne
+    @ManyToOne()
     @JoinColumn(name = "blog_id")
     private Blog blog;
 
